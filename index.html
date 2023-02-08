@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./js/echarts.min.js"></script>
+    <script src="./js/option.js"></script>
+    <script src="./js/window.js"></script>
+    <script src="./js/BubbleSort.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .main {
+        width: 50vw;
+        height: 50vh;
+        margin: 0 auto;
+        background-color: yellow;
+      }
+      button {
+        margin: 0 auto;
+        display: block;
+        width: 10vw;
+        height: 5vh;
+      }
+    </style>
+  </head>
+  <body>
+    <button>冒泡排序</button>
+    <div class="main"></div>
+    <script>
+      var myChart = echarts.init(document.querySelector(".main"));
+      myChart.setOption(option);
+      document.querySelector("button").onclick = () => {
+        BubbleSort(option);
+      };
+    </script>
+  </body>
+</html>
